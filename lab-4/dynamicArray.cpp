@@ -1,16 +1,16 @@
 #include "dynamicArray.h"
 
-DynamicArray::DynamicArray(int capacity) { // конструктора для DynamicArray
-    this->values = new int[capacity]; // Выделяется памятб для массива
-    this->capacity = capacity; // Присваивание значение
+DynamicArray::DynamicArray(int capacity) { // ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г  Г¤Г«Гї DynamicArray
+    this->values = new int[capacity]; // Г‚Г»Г¤ГҐГ«ГїГҐГІГ±Гї ГЇГ Г¬ГїГІГЎ Г¤Г«Гї Г¬Г Г±Г±ГЁГўГ 
+    this->capacity = capacity; // ГЏГ°ГЁГ±ГўГ ГЁГўГ Г­ГЁГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ
 }
 
-void DynamicArray::coutValues() { // Определение метода
-    for (int i = 0; i < this->length; i++) { // Цикл начиная с 0 и до значения переменной длины
+void DynamicArray::coutValues() { // ГЋГЇГ°ГҐГ¤ГҐГ«ГҐГ­ГЁГҐ Г¬ГҐГІГ®Г¤Г 
+    for (int i = 0; i < this->length; i++) { // Г–ГЁГЄГ« Г­Г Г·ГЁГ­Г Гї Г± 0 ГЁ Г¤Г® Г§Г­Г Г·ГҐГ­ГЁГї ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г®Г© Г¤Г«ГЁГ­Г»
         std::cout << this->values[i] << " ";
     }
     std::cout << std::endl << this->capacity << std::endl;
 }
 
  
-// в этом фрагменте уже создается метод реализации структуры DynamicArray
+// Гў ГЅГІГ®Г¬ ГґГ°Г ГЈГ¬ГҐГ­ГІГҐ ГіГ¦ГҐ Г±Г®Г§Г¤Г ГҐГІГ±Гї Г¬ГҐГІГ®Г¤ Г°ГҐГ Г«ГЁГ§Г Г¶ГЁГЁ Г±ГІГ°ГіГЄГІГіГ°Г» DynamicArray
