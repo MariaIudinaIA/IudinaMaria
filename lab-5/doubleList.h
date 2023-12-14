@@ -2,27 +2,27 @@
 #include <cassert> 
 
 struct Node { 
-    int data; // Данные узла
-    Node* prevNode; // Указатель на предыдущий узел
-    Node* nextNode; // Указатель на следующий узел
+    int data; // Р”Р°РЅРЅС‹Рµ СѓР·Р»Р°
+    Node* prevNode; // РЈРєР°Р·Р°С‚РµР»СЊ РЅР° РїСЂРµРґС‹РґСѓС‰РёР№ СѓР·РµР»
+    Node* nextNode; // РЈРєР°Р·Р°С‚РµР»СЊ РЅР° СЃР»РµРґСѓСЋС‰РёР№ СѓР·РµР»
 
-    Node(int value) : data(value), prevNode(nullptr), nextNode(nullptr) {} // Конструктор для инициализации узла
+    Node(int value) : data(value), prevNode(nullptr), nextNode(nullptr) {} // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё СѓР·Р»Р°
 };
 
 class DoubleLinkedList { 
-    Node* firstNode; // Указатель на первый узел списка
-    Node* lastNode; // Указатель на последний узел списка
+    Node* firstNode; // РЈРєР°Р·Р°С‚РµР»СЊ РЅР° РїРµСЂРІС‹Р№ СѓР·РµР» СЃРїРёСЃРєР°
+    Node* lastNode; // РЈРєР°Р·Р°С‚РµР»СЊ РЅР° РїРѕСЃР»РµРґРЅРёР№ СѓР·РµР» СЃРїРёСЃРєР°
 
-    DoubleLinkedList() : firstNode(nullptr), lastNode(nullptr) {} // Конструктор класса, указатели у нас nullptr
+    DoubleLinkedList() : firstNode(nullptr), lastNode(nullptr) {} // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР°, СѓРєР°Р·Р°С‚РµР»Рё Сѓ РЅР°СЃ nullptr
 
-    Node* insertAfter(Node* node, int value); // Метод для вставки узла (после)
-    Node* insertBefore(Node* node, int value); // Метод для вставки узла (перед)
-    Node* find(int value); // Метод для поиска узла
-    void remove(Node* node); // Метод для удаления
-    void assertNoCycles(); // Метод для проверки
+    Node* insertAfter(Node* node, int value); // РњРµС‚РѕРґ РґР»СЏ РІСЃС‚Р°РІРєРё СѓР·Р»Р° (РїРѕСЃР»Рµ)
+    Node* insertBefore(Node* node, int value); // РњРµС‚РѕРґ РґР»СЏ РІСЃС‚Р°РІРєРё СѓР·Р»Р° (РїРµСЂРµРґ)
+    Node* find(int value); // РњРµС‚РѕРґ РґР»СЏ РїРѕРёСЃРєР° СѓР·Р»Р°
+    void remove(Node* node); // РњРµС‚РѕРґ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ
+    void assertNoCycles(); // РњРµС‚РѕРґ РґР»СЏ РїСЂРѕРІРµСЂРєРё
 
-    ~DoubleLinkedList(); // Деструктор для очистки памяти
+    ~DoubleLinkedList(); // Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ РѕС‡РёСЃС‚РєРё РїР°РјСЏС‚Рё
 
 private:
-    void deleteList(); // Метод для удаления
+    void deleteList(); // РњРµС‚РѕРґ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ
 };
